@@ -1,0 +1,23 @@
+$mainColor: rgba(165, 123, 68, 0.782);
+$mainColor2:   linear-gradient(
+  319deg,
+  /*#faa499 0%,
+  #f7dd85 37%,
+  #ffc55c 100%*/
+  #005AA7 0%,
+  #FFFDE4 100%
+);
+  
+/*Main Colors in Project*/
+$background: #8f542121;
+$primary: #0b628b4e;
+$secondary: #8f542124;
+$third: #0b628b50;
+
+$width: 768px;
+
+@mixin mobile {
+  @media (max-width: #{$width}) {
+    @content;
+  }
+}

@@ -1,0 +1,15 @@
+.skills {
+ /* background-color: #4D4545;*/
+ background: linear-gradient(#2c3e50de 1%, #4D4545 10%);
+
+  color: #fafafa;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    margin: 90px 0 50px 0;
+  }
+}

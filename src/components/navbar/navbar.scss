@@ -1,0 +1,149 @@
+@import "../../global.scss";
+
+//Topbar
+.topbar {
+  width: 100%;
+  height: 70px;
+  background-color: #0f3f5765;
+  box-shadow: 0 20px 20px -1px rgba(9, 31, 49, 0.62);
+  font-family: "Roboto Slab", serif;
+  color: #fafafa;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  transition: all 0.7s ease;
+  scrollbar-width: none; //For Firefox
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  //active topbar
+  &.active {
+    color: #fcfcfc;
+    background-color: #0f3f5700;
+    box-shadow: 0 20px 20px -1px rgba(9, 31, 49, 0);
+
+    //Hamburger
+    .hamburger {
+      //Hamburger span
+      span {
+        &:first-child {
+          background-color: #ffffff;
+          transform: rotate(405deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:last-child {
+          background-color: #ffffff;
+          transform: rotate(-405deg);
+        }
+      }
+      //end Hamburger span
+    }
+    //end Hamburger
+  }
+  //end active topbar
+}
+//end Topbar
+
+//Wrapper
+.wrapper {
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  //Left side wrapper
+  .left {
+    display: flex;
+    align-items: center;
+
+    /*logo effect from : https://codepen.io/CameronFitzwilliam/pen/pamobO */
+    .logo {
+      font-size: 40px;
+      font-weight: 700;
+      text-decoration: none;
+
+      margin-right: 40px;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: url(https://thumbs.dreamstime.com/b/bright-blue-ocean-water-beautiful-sea-lake-river-144926719.jpg);
+      background-size: auto;
+      background-attachment: unset;
+      background-position: 0%;
+
+      animation: clouds-moving infinite 220s;
+      animation-fill-mode: forwards;
+      animation-play-state: running;
+      animation-timing-function: linear;
+    }
+
+    .itemContainer {
+      display: flex;
+      align-items: center;
+      margin-left: 30px;
+
+      font-weight: 400;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .icon {
+      font-size: 18px;
+      margin-right: 5px;
+    }
+
+    .span {
+      font-size: 15px;
+    }
+  }
+  //end Left side wrapper
+
+  //Right side wrapper
+  .right {
+    //Right Hamburger
+    .hamburger {
+      width: 32px;
+      height: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+
+      scrollbar-width: none; //For Firefox
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      span {
+        width: 100%;
+        height: 3px;
+        background-color: $mainColor;
+        transform-origin: left;
+        transition: all 0.7s ease;
+        border-radius: 50%;
+      }
+    }
+    //end Right Hamburger
+  }
+  //end Right side wrapper
+}
+//end Wrapper
+
+@keyframes clouds-moving {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}

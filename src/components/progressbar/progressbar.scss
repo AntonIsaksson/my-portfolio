@@ -1,0 +1,62 @@
+.pbContainer {
+    margin-top: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.progress {
+  background: #2c3e50;
+  border-radius: 100px;
+  align-items: center;
+  padding: 0 5px;
+  display: flex;
+  height: 40px;
+  width: 600px;
+  margin: 20px;
+
+  .icon {
+    margin: 3px 5px 3px 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fafafa;
+    
+    border-radius: 20%;
+    padding: 5px;
+
+  }
+}
+
+.progress-value {
+  position: relative;
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+ /* background: rgb(20, 197, 156);*/
+  /*background: linear-gradient(90deg,#9eff3d9a,#47a2209a 17%,#6cff4baa 34%,#0b4e1595 51%,#9eff3d95 68%,#47a22084 85%,#9eff3d97);*/
+  background: linear-gradient(90deg,#ED8D8D,#a56262 17%,#ED8D8D 34%,#a56262 51%,#ED8D8D 68%,#a56262 85%,#ED8D8D);
+  height: 30px;
+  animation: progress-animation 5s linear infinite;
+  background-size: 300% 100%;
+  
+
+  h4 {
+    position: absolute;
+    left: 50%;
+    color: #fafafa;
+  }
+ 
+}
+
+@keyframes load {
+  0% { width: 0; }
+  100% { width: 68%; }
+}
+
+@keyframes progress-animation {
+  0% { background-position: 100%; }
+  100% { background-position: 0; }
+}

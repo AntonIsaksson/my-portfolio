@@ -1,0 +1,172 @@
+.landingPage {
+  --background: #8f542121;
+  --primary: #0b628b4e;
+  --secondary: #8f542124;
+  --third: #0b628b50;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+
+  
+  .imageWrap {
+    background: #2c3e509a;
+    width: 100vw;
+      height: 100vh;
+    .bgimage-home {
+      background-image: url("../landingpage/assets/lpbg2.jpg");
+      filter: brightness(100%);
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+  }
+
+
+  //Bubbles-----------------------------//
+  
+    
+    
+
+    //Bubble Image-----------------------------//
+    .profileImg {
+      align-items: center;
+      justify-content: center;
+      z-index: 5;
+      display: flex;
+      position: absolute;
+      top: 25%;
+      
+      .imgContainer {
+        margin: 50px;
+        height: 200px;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: rgb(38, 62, 102) 3px 3px 6px 0px inset,
+          rgba(26, 48, 97, 0.5) -3px -3px 6px 1px inset;
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        animation: morph 8s ease-in-out infinite;
+        transition: all 1s ease-in-out;
+
+        &:hover {
+          height: 400px;
+          width: 400px;
+          transition: all 1s ease-in-out;
+        }
+
+        img {
+          height: 100%;
+          filter: opacity(0.5) drop-shadow(30px 16px 20px rgb(1, 15, 26))
+            contrast(1) grayscale(0.4) blur(4px) brightness(0.8);
+          transition: all 1s ease-in-out;
+          animation: mover 3s infinite alternate;
+          position: absolute;
+
+          &:hover {
+            filter: opacity(0.8) drop-shadow(30px 16px 20px rgb(1, 15, 26))
+              contrast(1) grayscale(0.4) blur(0px) brightness(0.8);
+            transition: all 1s ease-in-out;
+            animation: mover 0s infinite alternate;
+          }
+        }
+      }
+    }
+    //Bubble Image END-----------------------------//
+
+    .welcomeBubble {
+      justify-content: center;
+      position: absolute;
+      left: 100px;
+      top: 100px;
+
+      .welcomeContainer {
+        margin: 50px;
+        height: 100px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: rgb(38, 62, 102) 3px 3px 6px 0px inset,
+          rgba(26, 48, 97, 0.5) -3px -3px 6px 1px inset;
+
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        animation: morph 8s ease-in-out infinite;
+        transition: all 1s ease-in-out;
+
+        &:hover {
+          height: 400px;
+          width: 400px;
+          transition: all 1s ease-in-out;
+
+          &:hover h1 {
+            transition: all 1s ease-in-out;
+            font-size: 120%;
+            color: #fafafa;
+          }
+        }
+
+        h1 {
+          font-size: 10px;
+          color: #fafafa42;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          transition: all 1s ease-in-out;
+          animation: mover 2s infinite alternate;
+        }
+      }
+    }
+  
+}
+
+/*--------Keyframes------------*/
+
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    background: linear-gradient(
+      45deg,
+      var(--primary) 0%,
+      var(--secondary) 100%
+    );
+    filter: drop-shadow(16px 16px 20px rgb(6, 41, 68));
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    background: linear-gradient(45deg, var(--third) 0%, var(--secondary) 100%);
+    filter: drop-shadow(-16px 16px 20px rgb(6, 41, 68));
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    background: linear-gradient(
+      45deg,
+      var(--primary) 0%,
+      var(--secondary) 100%
+    );
+    filter: drop-shadow(16px -16px 20px rgb(6, 41, 68));
+  }
+}
+
+@keyframes mover {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
