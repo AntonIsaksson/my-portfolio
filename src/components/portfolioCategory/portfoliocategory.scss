@@ -1,0 +1,36 @@
+.portfolioItemContainer {
+  width: 100vw;
+  justify-content: center;
+  display: flex;
+
+  h1 {
+    position: absolute;
+    top: 40px;
+  }
+
+  .item {
+    width: 1000px;
+    height: 100%;
+    background: linear-gradient(#4D4545 1%, #2c3e50de 2%, #2c3e50de 99%, #4D4545 100%);
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    .first {
+      color: rgb(96, 118, 137);
+      font-size: 10px;
+
+      .card {
+        max-height: 20rem;
+        background-color: rgba(255, 255, 255, 0.422);
+
+        .imgContainer {
+          img {
+            max-width: 50%;
+          }
+        }
+      }
+    }
+  }
+}

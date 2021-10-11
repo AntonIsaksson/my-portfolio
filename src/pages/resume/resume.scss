@@ -1,92 +1,144 @@
+$color: skyblue;
+$lineColor: hotpink;
+$fontColor: #bbb;
+$bgColor1: #222;
+$bgColor2: #444;
+$yearBgColor: #333;
 
+$breakpoint: 700px;
 
 .resume {
-    background: linear-gradient(#4D4545 1%, #2c3e50de 10%);
+  background: linear-gradient(#4d4545 1%, #2c3e50de 10%);
   color: #ecf0f1;
-  
 }
 
 .brownBg {
-    padding: 120px 20px 0 20px;
-    overflow: hidden;
+  padding: 120px 20px 0 20px;
 }
 
 .blue-bg {
-    background-color: #4D4545;
-    color: #ED8D8D;
+  background-color: #4d4545;
+  color: #ed8d8d;
+  height: 100%;
+  font-size: 8px;
+  padding: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1000px;
+  text-align: center;
+
+  &:before {
+    content: "";
+    position: absolute;
     height: 100%;
-    padding: 10px;
-    overflow: hidden;
-    border-radius: 10px;
+    border: 1px solid $lineColor;
+    right: 40px;
+    top: 0;
+  }
 
-    p {
-        font-size: 12px;
-    }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
-    h2 {
-        text-align: center;
-        text-shadow: 2px 2px 2px rgba(221, 136, 203, 0.49);
+  @media screen and (min-width: $breakpoint) {
+    padding: 2rem;
+    &:before {
+      left: calc(50% - 1px);
+      right: auto;
     }
+  }
+}
 
+.timeline__item {
+  padding: 1rem;
+  border: 2px solid $lineColor;
+  border-image: linear-gradient(to right, $color 0%, $lineColor 100%);
+  border-image-slice: 1;
+  position: relative;
+  margin: 1rem 3rem 1rem 1rem;
+  
+
+  clear: both;
+  text-align: center;
+
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+  }
+
+  &:before {
+    right: -10px;
+    top: calc(50% - 5px);
+    border-style: solid;
+    border-color: $lineColor $lineColor transparent transparent;
+    border-width: 10px;
+    transform: rotate(45deg);
+  }
+
+  @media screen and (min-width: $breakpoint) {
+    width: 44%;
+    margin: 1rem;
+
+    &:nth-of-type(2n) {
+      float: right;
+      margin: 1rem;
+      border-image: linear-gradient(to right, $lineColor 0%, $color 100%);
+      border-image-slice: 1;
+
+      &:before {
+        right: auto;
+        left: -10px;
+        border-color: transparent transparent $lineColor $lineColor;
+      }
     }
-  
-  .circle {
-    font-weight: bold;
-    padding: 15px 20px;
-    border-radius: 50%;
-    background-color: #ED8D8D;
-    overflow: hidden;
-    color: #4D4545;
-    max-height: 50px;
-    z-index: 2; }
-  
-  .how-it-works.row {
-    display: flex; }
-    .how-it-works.row .col-2 {
-      display: inline-flex;
-      align-self: stretch;
-      align-items: center;
-      justify-content: center; }
-      .how-it-works.row .col-2::after {
-        content: '';
-        position: absolute;
-        border-left: 3px solid #ED8D8D;
-        z-index: 1; }
-    
-  
-  .timeline div {
-    padding: 0;
-    height: 40px; }
-  
-  .timeline hr {
-    border-top: 3px solid #ED8D8D;
-    margin: 0;
-    top: 17px;
-    position: relative; }
-  
-  .timeline .col-2 {
-    display: flex;
-    overflow: hidden; }
-  
-  .timeline .corner {
-    border: 3px solid #ED8D8D;
-    width: 100%;
-    position: relative;
-    border-radius: 15px; }
-  
-  .timeline .top-right {
-    left: 50%;
-    top: -50%; }
-  
-  .timeline .left-bottom {
-    left: -50%;
-    top: calc(50% - 3px); }
-  
-  .timeline .top-left {
-    left: -50%;
-    top: -50%; }
-  
-  .timeline .right-bottom {
-    left: 50%;
-    top: calc(50% - 3px); }
-  
+  }
+}
+
+.timeline__item--year {
+  text-align: center;
+  width: 25%;
+  font-size: 0.8rem;
+  background-color: $yearBgColor;
+  padding: 10px;
+  border-image: none;
+  text-align: center;
+
+  &:before {
+    display: none;
+  }
+
+  @media screen and (min-width: $breakpoint) {
+    text-align: center;
+    margin: 0 auto;
+
+    &:nth-of-type(2n) {
+      float: none;
+      margin: 0 auto;
+      border-image: none;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+.timeline__title {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5em;
+}
+
+.timeline__blurb {
+  line-height: 1.5;
+  font-size: 1rem;
+  margin: 0.5rem 0 0;
+}
