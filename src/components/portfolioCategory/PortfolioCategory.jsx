@@ -42,9 +42,6 @@ const PortfolioCard = () => {
 
 
               <div className="card">
-              
-                
-              
                 <div className="card-body">
                 
                   <h5 className="card-title">Title</h5>

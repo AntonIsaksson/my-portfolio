@@ -1,13 +1,33 @@
 @import "../../global.scss";
 
 .contact {
-  background: linear-gradient(#4d4545 1%, #2c3e50 10%);
+  background: linear-gradient(rgba(148, 91, 136, 0.544) 1%, rgba(148, 91, 136, 0.544) 3%, #517293d0 10%);
+  color: #fafafa;
+  position: relative;
+  padding-top: 80px;
 
-  .row {
-    align-items: center;
-    justify-content: center;
-    display: flex;
+
+  .left {
+    margin-top: 70px;
   }
+
+
+  .right {
+    margin-top: 90px;
+
+    .form-container {
+      max-width: 500px;
+    }
+    
+    .form-group {
+      padding: 10px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      
+    }
+  }
+  
 }
 
 
