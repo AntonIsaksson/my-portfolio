@@ -42,7 +42,8 @@
     color: #f1f1f15a;
     ///*ORANGE*/text-shadow: 2px 2px 2px rgba(28, 255, 92, 0.619);
     ///*ORANGE*/text-shadow: 2px 2px 2px rgba(255, 130, 28, 0.619);
-    /*PINK*/ text-shadow: 2px 2px 2px rgba(221, 136, 203, 0.49);
+    /*PINK*/
+    text-shadow: 2px 2px 2px rgba(221, 136, 203, 0.49);
 
     .letterContainer {
       position: relative;
@@ -52,6 +53,8 @@
         justify-content: space-around;
         padding: 20px;
         transition: 0.4s all ease-in-out;
+        
+        
 
         &:hover {
           color: #f1f1f1f6;
@@ -66,6 +69,8 @@
           font-size: 20px;
           text-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.571);
           color: #3d62ab2b;
+          text-transform: none;
+          letter-spacing: none;
         }
 
         .l1 {
@@ -74,6 +79,7 @@
           cursor: pointer;
           font-weight: 700;
           color: #f1f1f1a0;
+          letter-spacing: 0.1em;
 
           &:hover {
             color: #f1f1f13e;
@@ -103,7 +109,7 @@
   .profileImg {
     align-items: center;
     justify-content: center;
-    z-index: 5;
+    z-index: 6;
     display: flex;
     position: absolute;
     top: 50%;
@@ -247,14 +253,14 @@
   from {
     color: rgb(12, 29, 39);
     text-shadow: 0 0 10px #f09dff16, 0 0 20px #9dd6ff5f, 0 0 30px #f49dff5f,
-      0 0 40px #9dc6ff5f, 0 0 50px #ed9dff5f, 0 0 60px #9dc6ff5f, 0 0 70px #e59dff5f,
-      0 0 90px #788ec15f;
+      0 0 40px #9dc6ff5f, 0 0 50px #ed9dff5f, 0 0 60px #9dc6ff5f,
+      0 0 70px #e59dff5f, 0 0 90px #788ec15f;
   }
 
   to {
     color: rgba(0, 0, 0, 0);
     text-shadow: 0 0 20px #364f585f, 0 0 30px #3d58625f, 0 0 40px #6692a25f,
-      0 0 50px #7bb3c75f, 0 0 60px #9de5ff5f, 0 0 70px #9de5ff5f, 0 0 80px #9de5ff5f,
-      0 0 90px #9de5ff5f;
+      0 0 50px #7bb3c75f, 0 0 60px #9de5ff5f, 0 0 70px #9de5ff5f,
+      0 0 80px #9de5ff5f, 0 0 90px #9de5ff5f;
   }
 }

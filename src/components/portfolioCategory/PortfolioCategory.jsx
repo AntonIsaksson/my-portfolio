@@ -1,6 +1,5 @@
 import "./portfoliocategory.scss";
 
-
 const PortfolioCard = () => {
   const data = [
     {
@@ -8,26 +7,72 @@ const PortfolioCard = () => {
       category: "Designs",
       projects: [
         {
-          id: 1,
-          projectName: 'Design pj 1',
-          img: '',
-          description: 'Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.',
+          projectName: "Halloween Memory",
+          img: "/static/media/halloweenMemory.480d5b6a.gif",
+          description:
+            "Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.",
+          icon: "assets/img/js.png",
         },
-      ]
-        
+        {
+          projectName: "Slow Down Resort",
+          img: "/static/media/slowDown.75d922d2.gif",
+          description:
+            "Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.",
+          icon: "",
+        },
+        {
+          projectName: "Lilla Svenska Skolan",
+          img: "assets/img/svenskaSkolan.png",
+          description:
+            "Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.",
+          icon: "",
+        },
+      ],
     },
-    
+
     {
       id: 2,
       category: "React Projects",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+      projects: [
+        {
+          projectName: "React Project 1",
+          img: "",
+          description:
+            "Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.",
+          icon: "",
+        },
+        {
+          projectName: "React Project 2",
+          img: "",
+          description:
+            "Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.",
+          icon: "",
+        },
+      ],
     },
     {
       id: 3,
       category: "Python",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+      projects: [
+        {
+          projectName: "Python Project 1",
+          img: "",
+          description:
+            "Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.",
+          icon: "",
+        },
+        {
+          projectName: "Python Project 2",
+          img: "",
+          description:
+            "Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.",
+          icon: "",
+        },
+      ],
     },
   ];
 
@@ -35,44 +80,31 @@ const PortfolioCard = () => {
     <>
       {data.map((d) => (
         <div className="container-fluid portfolioItemContainer">
-          <h1>{d.category}</h1>
+          <h1 className='subHeading'><span className='subHeadingSpan'>{d.category}</span> </h1>
           <div className="item row">
-            <div className="col-4 first">
-
-
-
-              <div className="card">
-                <div className="card-body">
-                
-                  <h5 className="card-title">Title</h5>
-                  <p className="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                  <p className="card-text">
-                    <small className="text-muted">
-                      Last updated 3 mins ago
-                    </small>
-                  </p>
-                  
-                </div>
-              
-               
-                <div className="imgContainer mb-2 col-12 text-center">
-                  <img
-                    src="assets/img/mail2.png"
-                    className="img-fluid card-img-bottom"
-                    alt="..."
-                  />
+            {d.projects.map((project) => (
+              <div className="col-4 first">
+                <div className="card">
+                  <div
+                    className="imgContainerCard"
+                    style={{
+                      backgroundImage: `url(${project.img})`,
+                    }}
+                  ></div>
+                  <div className="card-body">
+                    <h5 className="card-title text-center ">
+                      {project.projectName} 
+                    </h5>
+                    <p className="card-text">{project.description}</p>
+                    
+                      <img src={project.icon} alt="" className='card-img-bottom icon2 img-fluid'/>
+                    
+                  </div>
                 </div>
               </div>
-
-
-
-            </div>
+            ))}
           </div>
-          </div>
+        </div>
       ))}
     </>
   );

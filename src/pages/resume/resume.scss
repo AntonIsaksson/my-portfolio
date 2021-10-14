@@ -1,10 +1,4 @@
-$color: skyblue;
-$lineColor: hotpink;
-$fontColor: #bbb;
-$bgColor1: #222;
-$bgColor2: #444;
-$yearBgColor: #333;
-$breakpoint: 700px;
+
 
 .resume {
   background: linear-gradient(
@@ -22,3 +16,50 @@ $breakpoint: 700px;
   }
 }
 
+.lineContainer {
+  padding: 0 20px;
+  margin: 0 30px;
+  background-color: rgba(148, 91, 136, 0.544);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  height: 500px;
+}
+
+.divider {
+  display: flex;
+  
+  &:before,
+  &:after {
+    content: "";
+    flex: 1;
+  }
+}
+
+// Base line
+.line {
+  align-items: center;
+  margin: 1em -1em;
+  
+  &:before,
+  &:after {
+    height: 1px;
+    margin: 0 1em;
+  }
+}
+
+
+.glow {
+  &:before,
+  &:after {
+    height: 6px;
+    -webkit-filter: blur(5px);
+    border-radius: 5px;
+  }
+  
+  &:before {
+    background: linear-gradient(to right, blue, hotpink);
+  }
+  
+  &:after {
+    background: linear-gradient(to left, blue, hotpink);
+  }
+}

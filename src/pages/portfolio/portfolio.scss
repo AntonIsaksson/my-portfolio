@@ -1,15 +1,15 @@
 .portfolio {
-  background: linear-gradient(#2c3e509a 1%, #2c3e509a 3%, rgba(148, 91, 136, 0.544) 10%);
+  background: linear-gradient(
+    #2c3e509a 1%,
+    #2c3e509a 3%,
+    rgba(148, 91, 136, 0.544) 10%
+  );
   color: #fafafa;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-
-  h1 {
-    position: absolute;
-    top: 120px;
-  }
+  padding: 0;
 
   .arrow {
     height: 50px;
@@ -27,14 +27,11 @@
   }
 
   .slider {
-    height: 500px;
+    padding: 0;
+    top: 150px;
     display: flex;
     position: absolute;
-    transition: all 1s ease-out;
-    margin-top: 160px;
-    transition: all 1s ease-out;
+    transition: all 1s ease-in-out;
     left: 0;
-
-    
-}
+  }
 }

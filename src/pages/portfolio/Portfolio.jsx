@@ -3,7 +3,7 @@ import { useState } from "react";
 import PortfolioCategory from "../../components/portfolioCategory/PortfolioCategory";
 
 const Portfolio = (data) => {
-  const [slide, setSlide] = useState(0);
+  const [slide, setSlide] = useState(1);
 
   const handleClick = (way) => {
     way === "left"
@@ -13,8 +13,6 @@ const Portfolio = (data) => {
 
   return (
     <div className="portfolio" id="portfolio">
-      
-
       <div
         className="slider"
         style={{ transform: `translateX(-${slide * 100}vw)` }}
