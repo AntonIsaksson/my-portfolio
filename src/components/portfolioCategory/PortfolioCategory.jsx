@@ -1,5 +1,15 @@
 import "./portfoliocategory.scss";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+  faYoutube,
+  faCss3Alt,
+  faHtml5,
+  faJsSquare,
+  faWix,
+} from "@fortawesome/free-brands-svg-icons";
+
 const PortfolioCard = () => {
   const data = [
     {
@@ -8,24 +18,32 @@ const PortfolioCard = () => {
       projects: [
         {
           projectName: "Halloween Memory",
-          img: "/static/media/halloweenMemory.480d5b6a.gif",
+          img: "assets/img/halloweenMemory.gif",
           description:
             "Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.",
-          icon: "assets/img/js.png",
+          icon: <FontAwesomeIcon className='m-2' icon={faCss3Alt} />,
+          icon2: <FontAwesomeIcon className='m-2' icon={faHtml5} />,
+          icon3: <FontAwesomeIcon className='m-2' icon={faJsSquare} />,
         },
         {
           projectName: "Slow Down Resort",
-          img: "/static/media/slowDown.75d922d2.gif",
+          img: "assets/img/slowDown.gif",
           description:
             "Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.",
           icon: "",
+          icon2: <FontAwesomeIcon className='m-2' icon={faWix} />,
+          websiteName: 'www.slowdownlanta.se',
+          url: 'https://www.slowdownlanta.se/',
         },
         {
           projectName: "Lilla Svenska Skolan",
           img: "assets/img/svenskaSkolan.png",
           description:
             "Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.",
-          icon: "",
+          icon: '',
+          icon2: <FontAwesomeIcon className='m-2' icon={faWix} />,
+          websiteName: 'www.svenskaskolanlanta.se',
+          url: 'http://www.svenskaskolanlanta.se/',
         },
       ],
     },
@@ -80,7 +98,9 @@ const PortfolioCard = () => {
     <>
       {data.map((d) => (
         <div className="container-fluid portfolioItemContainer">
-          <h1 className='subHeading'><span className='subHeadingSpan'>{d.category}</span> </h1>
+          <h1 className="subHeader">
+            <span className="subHeaderSpan">{d.category}</span>{" "}
+          </h1>
           <div className="item row">
             {d.projects.map((project) => (
               <div className="col-4 first">
@@ -91,14 +111,33 @@ const PortfolioCard = () => {
                       backgroundImage: `url(${project.img})`,
                     }}
                   ></div>
+
                   <div className="card-body">
                     <h5 className="card-title text-center ">
-                      {project.projectName} 
+                      {project.projectName}
                     </h5>
                     <p className="card-text">{project.description}</p>
                     
-                      <img src={project.icon} alt="" className='card-img-bottom icon2 img-fluid'/>
                     
+
+                    <div className="row">
+                      <div className="col-4 align-self-center iconContainer mt-5">
+                        <div className="card-img-bottom icon2 text-center">
+                          {project.icon}
+                        </div>
+                      </div>
+                      <div className="col-4 align-self-center mt-5 iconContainer">
+                      <div className="card-img-bottom icon2 text-center">
+                          {project.icon2}
+                        </div>
+                      </div>
+                      <div className="col-4 align-self-center mt-5 iconContainer">
+                      <div className="card-img-bottom icon2 text-center">
+                          {project.icon3}
+                        </div>
+                      </div>
+                    </div>
+                    <a href={project.url} target='_blank'>{project.websiteName}</a>
                   </div>
                 </div>
               </div>

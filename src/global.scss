@@ -1,3 +1,5 @@
+
+
 $mainColor: rgba(165, 123, 68, 0.782);
 $mainColor2:   linear-gradient(
   319deg,
@@ -13,11 +15,92 @@ $background: #8f542121;
 $primary: #0b628b4e;
 $secondary: #8f542124;
 $third: #0b628b50;
-
 $width: 768px;
+
+
+//HEADERS
+//Header 1
+.subHeader {
+  position: absolute;
+  top: 1px;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  background-clip: text;
+
+  .subHeaderSpan {
+    display: block;
+    margin: 0 auto;
+
+    background: url(https://cdn.vectorstock.com/i/1000x1000/87/21/stylized-waves-vector-1338721.jpg)
+      repeat-y;
+    animation: aitf2 20s linear infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: #80acf800;
+    -webkit-animation: aitf2 20s linear infinite;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+
+    text-shadow: 0 0 5px rgba(88, 172, 255, 0.408),
+      0 0 10px rgba(88, 172, 255, 0.408), 0 0 20px rgba(88, 172, 255, 0.408);
+    padding: 20px 50px;
+  }
+}
+
+//Header 2
+
+.subHeader2 {
+  position: absolute;
+  top: 1px;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  background-clip: text;
+
+  .subHeaderSpan2 {
+    display: block;
+    margin: 0 auto;
+
+    background: url(https://cdn.vectorstock.com/i/1000x1000/87/21/stylized-waves-vector-1338721.jpg)
+      repeat-y;
+    animation: aitf2 20s linear infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: #80acf800;
+    -webkit-animation: aitf2 20s linear infinite;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+
+    text-shadow: 0 0 5px rgba(253, 120, 251, 0.408),
+      0 0 10px rgba(253, 120, 251, 0.408), 0 0 20px rgba(253, 120, 251, 0.408);
+    padding: 20px 50px;
+  }
+}
+
+
+
 
 @mixin mobile {
   @media (max-width: #{$width}) {
     @content;
+  }
+}
+
+
+//KEYFRAMES
+@keyframes aitf {
+  0% {
+    background-position: -150% 50%;
+  }
+  100% {
+    background-position: 250% 50%;
+  }
+}
+
+@keyframes aitf2 {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
   }
 }

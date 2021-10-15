@@ -1,4 +1,4 @@
-
+@import '../../global.scss';
 
 .resume {
   background: linear-gradient(
@@ -7,6 +7,11 @@
     #517293d0 10%
   );
   color: #ecf0f1;
+  position: relative;
+  padding-top: 150px;
+  justify-content: center;
+    align-items: center;
+    display: flex;
 
   h1 {
     justify-content: center;
@@ -17,11 +22,16 @@
 }
 
 .lineContainer {
-  padding: 0 20px;
-  margin: 0 30px;
-  background-color: rgba(148, 91, 136, 0.544);
+  padding: 20px;
+  margin: 20px 50px;
+  width: 50vw;
+  height: 65vh;
+  background: #e867ff15;
+    border: 5px solid #541c5240;
+    border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-  height: 500px;
+  
+  flex:2;
 }
 
 .divider {
@@ -34,32 +44,5 @@
   }
 }
 
-// Base line
-.line {
-  align-items: center;
-  margin: 1em -1em;
-  
-  &:before,
-  &:after {
-    height: 1px;
-    margin: 0 1em;
-  }
-}
 
 
-.glow {
-  &:before,
-  &:after {
-    height: 6px;
-    -webkit-filter: blur(5px);
-    border-radius: 5px;
-  }
-  
-  &:before {
-    background: linear-gradient(to right, blue, hotpink);
-  }
-  
-  &:after {
-    background: linear-gradient(to left, blue, hotpink);
-  }
-}

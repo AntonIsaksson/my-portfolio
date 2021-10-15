@@ -2,6 +2,8 @@ import "./portfolio.scss";
 import { useState } from "react";
 import PortfolioCategory from "../../components/portfolioCategory/PortfolioCategory";
 
+
+
 const Portfolio = (data) => {
   const [slide, setSlide] = useState(1);
 

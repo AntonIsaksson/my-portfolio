@@ -1,7 +1,13 @@
 import "./navbar.scss";
 import Menu from "./menu/Menu";
 
-import { Person, Mail } from '@material-ui/icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+  faUserTie,
+  faEnvelope
+} from "@fortawesome/free-solid-svg-icons";
+
 
 
 const NavbarMenu = ({ menuOpen, setMenuOpen }) => {
@@ -18,11 +24,11 @@ const NavbarMenu = ({ menuOpen, setMenuOpen }) => {
               aidev.
             </a>
             <div className="itemContainer">
-              <Person className='icon'/>
+            <FontAwesomeIcon className='icon text-center' icon={faUserTie} />
               <span>+46 735957162</span>
             </div>
             <div className="itemContainer">
-              <Mail className='icon'/>
+            <FontAwesomeIcon className='icon text-center' icon={faEnvelope} />
               <span>anton.isak@outlook.com</span>
             </div>
           </div>
