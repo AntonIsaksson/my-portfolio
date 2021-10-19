@@ -1,4 +1,4 @@
-@import '../../global.scss';
+@import "../../global.scss";
 
 .resume {
   background: linear-gradient(
@@ -10,8 +10,8 @@
   position: relative;
   padding-top: 150px;
   justify-content: center;
-    align-items: center;
-    display: flex;
+  align-items: center;
+  display: flex;
 
   h1 {
     justify-content: center;
@@ -21,28 +21,124 @@
   }
 }
 
-.lineContainer {
+.timelineBox {
   padding: 20px;
   margin: 20px 50px;
   width: 50vw;
   height: 65vh;
   background: #e867ff15;
-    border: 5px solid #541c5240;
-    border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-  
-  flex:2;
-}
+  border: 5px solid #541c5240;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  flex: 2;
+  position: relative;
+  overflow: hidden;
 
-.divider {
-  display: flex;
-  
-  &:before,
-  &:after {
-    content: "";
-    flex: 1;
+  .crockedContainer {
+    overflow: hidden;
+    z-index: 1;
+
+    .line1,
+    .line2,
+    .line3,
+    .line4,
+    .line5 {
+      border-left: 2px solid rgb(248, 122, 225);
+      height: 160px;
+      position: absolute;
+      left: 75%;
+      margin-left: -3px;
+    }
+    .line1 {
+      top: 0;
+      transform: rotate(-60deg);
+    }
+
+    .line2 {
+      top: 80px;
+      transform: rotate(60deg);
+    }
+
+    .line3 {
+      top: 160px;
+      transform: rotate(-60deg);
+    }
+
+    .line4 {
+      top: 240px;
+      transform: rotate(60deg);
+    }
+
+    .line5 {
+      top: 320px;
+      transform: rotate(-60deg);
+    }
+  }
+
+  .yearContainer {
+    z-index: 2;
+
+    .yearBox {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: rgb(255, 255, 255);
+      left: 60%;
+      top: 10px;
+      z-index: 5;
+      box-shadow: rgba(54, 17, 83, 0.571) 0px 5px 10px 0px;
+      
+        h5 {
+          position: absolute;
+          left: 8px;
+          top: 17px;
+          color: rgb(53, 101, 148);
+          font-size: 14px;
+        }
+    }
+    .happeningContainer {
+      position: absolute;
+      left: 460px;
+      top: 20px;
+      
+      h3 {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .yearContainer2 {
+    z-index: 2;
+
+    .yearBox2 {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: rgb(255, 255, 255);
+      left: 60%;
+      top: 90px;
+      z-index: 5;
+      box-shadow: rgba(54, 17, 83, 0.571) 0px 5px 10px 0px;
+      
+        h5 {
+          position: absolute;
+          left: 8px;
+          top: 17px;
+          color: rgb(53, 101, 148);
+          font-size: 14px;
+        }
+    }
+    .happeningContainer2 {
+      position: absolute;
+      left: 460px;
+      top: 20px;
+      
+      h3 {
+        font-size: 20px;
+      }
+    }
   }
 }
-
-
-

@@ -1,9 +1,7 @@
 import "./portfoliocategory.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import {
-  faYoutube,
   faCss3Alt,
   faHtml5,
   faJsSquare,
@@ -14,81 +12,117 @@ const PortfolioCard = () => {
   const data = [
     {
       id: 1,
-      category: "Designs",
+      category: "CMS Websites",
       projects: [
-        {
-          projectName: "Halloween Memory",
-          img: "assets/img/halloweenMemory.gif",
-          description:
-            "Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.",
-          icon: <FontAwesomeIcon className='m-2' icon={faCss3Alt} />,
-          icon2: <FontAwesomeIcon className='m-2' icon={faHtml5} />,
-          icon3: <FontAwesomeIcon className='m-2' icon={faJsSquare} />,
-        },
         {
           projectName: "Slow Down Resort",
           img: "assets/img/slowDown.gif",
           description:
             "Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.",
-          icon: "",
-          icon2: <FontAwesomeIcon className='m-2' icon={faWix} />,
-          websiteName: 'www.slowdownlanta.se',
-          url: 'https://www.slowdownlanta.se/',
+          icons: [
+            {
+              icon: <FontAwesomeIcon className="m-2" icon={faWix} />,
+            },
+          ],
+          websiteName: "www.slowdownlanta.se",
+          url: "https://www.slowdownlanta.se/",
         },
         {
           projectName: "Lilla Svenska Skolan",
           img: "assets/img/svenskaSkolan.png",
           description:
             "Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.",
-          icon: '',
-          icon2: <FontAwesomeIcon className='m-2' icon={faWix} />,
-          websiteName: 'www.svenskaskolanlanta.se',
-          url: 'http://www.svenskaskolanlanta.se/',
+          icons: [
+            {
+              icon: <FontAwesomeIcon className="m-2" icon={faWix} />,
+            },
+          ],
+          websiteName: "www.svenskaskolanlanta.se",
+          url: "http://www.svenskaskolanlanta.se/",
+        },
+        {
+          projectName: "Slow Down Beach",
+          img: "assets/img/slowDownBeachvolley.gif",
+          description:
+            "Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.",
+          icons: [
+            {
+              icon: <FontAwesomeIcon className="m-2" icon={faWix} />,
+            },
+          ],
+          websiteName: "www.slowdownbeachvolley.se",
+          url: "https://www.slowdownbeachvolley.se/",
         },
       ],
     },
 
     {
       id: 2,
-      category: "React Projects",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+      category: "Front End",
       projects: [
         {
-          projectName: "React Project 1",
-          img: "",
+          projectName: "Halloween Memory",
+          img: "assets/img/halloweenMemory.gif",
           description:
             "Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.",
-          icon: "",
+          icons: [
+            {
+              icon: <FontAwesomeIcon className="m-2" icon={faCss3Alt} />,
+            },
+            {
+              icon: <FontAwesomeIcon className="m-2" icon={faHtml5} />,
+            },
+            {
+              icon: <FontAwesomeIcon className="m-2" icon={faJsSquare} />,
+            },
+          ],
         },
         {
           projectName: "React Project 2",
           img: "",
           description:
             "Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.",
-          icon: "",
+          icons: [
+            {
+              icon: <FontAwesomeIcon className="m-2" icon={faWix} />,
+            },
+          ],
         },
       ],
     },
     {
       id: 3,
-      category: "Python",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+      category: "Full Stack",
       projects: [
         {
-          projectName: "Python Project 1",
-          img: "",
+          projectName: "Game Design 2d",
+          img: "assets/img/gameDesign.gif",
           description:
             "Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.",
-          icon: "",
+          websiteName: "www.gamedesign-2d.com",
+          url: "https://gamedesign-2d.herokuapp.com/",
+          icons: [
+            {
+              icon: <FontAwesomeIcon className="m-2" icon={faCss3Alt} />,
+            },
+            {
+              icon: <FontAwesomeIcon className="m-2" icon={faHtml5} />,
+            },
+            {
+              icon: <FontAwesomeIcon className="m-2" icon={faJsSquare} />,
+            },
+          ],
         },
         {
           projectName: "Python Project 2",
           img: "",
           description:
             "Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.",
-          icon: "",
+          icons: [
+            {
+              icon: <FontAwesomeIcon className="m-2" icon={faWix} />,
+            },
+          ],
         },
       ],
     },
@@ -117,27 +151,19 @@ const PortfolioCard = () => {
                       {project.projectName}
                     </h5>
                     <p className="card-text">{project.description}</p>
-                    
-                    
 
-                    <div className="row">
-                      <div className="col-4 align-self-center iconContainer mt-5">
-                        <div className="card-img-bottom icon2 text-center">
-                          {project.icon}
+                    <div className="row align-items-center">
+                      {project.icons.map((i) => (
+                        <div className="col-4 align-items-center iconContainer mt-5">
+                          <div className="card-img-bottom icon2 text-center">
+                            {i.icon}
+                          </div>
                         </div>
-                      </div>
-                      <div className="col-4 align-self-center mt-5 iconContainer">
-                      <div className="card-img-bottom icon2 text-center">
-                          {project.icon2}
-                        </div>
-                      </div>
-                      <div className="col-4 align-self-center mt-5 iconContainer">
-                      <div className="card-img-bottom icon2 text-center">
-                          {project.icon3}
-                        </div>
-                      </div>
+                      ))}
                     </div>
-                    <a href={project.url} target='_blank'>{project.websiteName}</a>
+                    <a href={project.url} target="_blank" rel='noreferrer'>
+                      {project.websiteName}
+                    </a>
                   </div>
                 </div>
               </div>

@@ -21,7 +21,7 @@ const NavbarMenu = ({ menuOpen, setMenuOpen }) => {
           {/*left side*/}
           <div className="left">
             <a href="#landingPage" aria-label="refraction" className="logo">
-              aidev.
+              dev<span>-</span>Ice.
             </a>
             <div className="itemContainer">
             <FontAwesomeIcon className='icon text-center' icon={faUserTie} />
