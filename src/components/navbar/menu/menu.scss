@@ -5,17 +5,22 @@
   position: absolute;
   top: 0;
   right: -300px;
-  z-index: 9;
+  z-index: -2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   transition: all 1s ease;
 
+  @include mobile {
+    right: 0;
+  }
+
   &.active {
     right: 0;
     width: 300px;
     background-color: $mainColor;
+    z-index: 9;
   }
 
   ul {

@@ -27,11 +27,11 @@ const Contact = () => {
   return (
     <div className="contact container-fluid" id="contact">
       <div className="row justify-content-evenly align-items-center">
-        <div className="col-6 left">
+        <div className="col-md-6 col-12 left">
           <img src="assets/img/handshake.png" alt="" />
         </div>
 
-        <div className="col-4 right">
+        <div className="col-md-4 col-12 right">
           <div className="container-fluid form-container">
             <div className="row">
               <div className="col text-center">

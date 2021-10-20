@@ -14,9 +14,15 @@
   height: 100vh;
   z-index: -1;
 
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  
   .imageWrap {
     background: #2c3e509a;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     .bgimage-home {
       background-image: url("../landingpage/assets/lpbg2.jpg");
@@ -42,10 +48,12 @@
     top: 26%;
     left: 150px;
     color: #f1f1f191;
-    ///*ORANGE*/text-shadow: 2px 2px 2px rgba(28, 255, 92, 0.619);
-    ///*ORANGE*/text-shadow: 2px 2px 2px rgba(255, 130, 28, 0.619);
-    /*PINK*/
     text-shadow: 2px 2px 2px rgba(221, 136, 203, 0.49);
+
+    @include mobile {
+      left: unset;
+      top: 12%;
+    }
 
     .letterContainer {
       position: relative;
@@ -82,6 +90,10 @@
           color: #f1f1f1a0;
           letter-spacing: 0.1em;
 
+          @include mobileSmall {
+            font-size: 38px;
+          }
+
           &:hover {
             color: #f1f1f13e;
             text-shadow: -10px -10px 1px rgba(221, 136, 203, 0.796);
@@ -108,6 +120,16 @@
       text-align: center;
       animation: glow 5.5s ease-in-out infinite alternate;
     }
+
+    @include mobile {
+      right: unset;
+      top: 450px;
+      font-size: 28px;
+    }
+    @include mobileSmall {
+      top: 400px;
+      font-size: 25px;
+    }
   }
   //Bubbles-----------------------------//
 
@@ -123,7 +145,19 @@
 
     &:hover {
       top: 20%;
+
+      @include mobile {
+        top: 25%;
+      }
     }
+
+    @include mobile {
+      top: 28%;
+    }
+    @include mobileSmall {
+      top: 28%;
+    }
+
     .imgContainer {
       margin: 50px;
       height: 200px;
@@ -137,10 +171,23 @@
       animation: morph 8s ease-in-out infinite;
       transition: all 1s ease-in-out;
 
+      @include mobile {
+        height: 250px;
+        width: 250px;
+      }
+      @include mobileSmall {
+        height: 200px;
+        width: 200px;
+      }
       &:hover {
         height: 400px;
         width: 400px;
         transition: all 1s ease-in-out;
+
+        @include mobile {
+          height: 300px;
+          width: 300px;
+        }
       }
 
       img {
@@ -151,6 +198,11 @@
         animation: mover 3s infinite alternate;
         position: absolute;
 
+        @include mobile {
+          filter: opacity(0.8) drop-shadow(30px 16px 20px rgb(1, 15, 26))
+          contrast(1) grayscale(0.4) blur(0px) brightness(0.8);
+        }
+
         &:hover {
           filter: opacity(0.8) drop-shadow(30px 16px 20px rgb(1, 15, 26))
             contrast(1) grayscale(0.4) blur(0px) brightness(0.8);
@@ -160,61 +212,6 @@
       }
     }
   }
-  //Bubble Image END-----------------------------//
-  /*
-  .welcomeBubble {
-    justify-content: center;
-    position: absolute;
-    left: 100px;
-    top: 400px;
-    padding: 0;
-    transition: all 2s ease-in;
-
-    &:hover {
-      top: 250px;
-      left: 150px;
-      z-index: 8;
-    }
-
-    .welcomeContainer {
-      margin: 50px;
-      height: 100px;
-      width: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: rgb(38, 62, 102) 3px 3px 6px 0px inset,
-        rgba(26, 48, 97, 0.5) -3px -3px 6px 1px inset;
-
-      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-      animation: morph 8s ease-in-out infinite;
-      transition: all 1s ease-in-out;
-
-      &:hover {
-        height: 400px;
-        width: 400px;
-        transition: all 1s ease-in-out;
-
-        &:hover h1 {
-          transition: all 1s ease-in-out;
-          font-size: 120%;
-          color: #fafafa;
-        }
-      }
-
-      h1 {
-        font-size: 10px;
-        color: #fafafa42;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        transition: all 1s ease-in-out;
-        animation: mover 2s infinite alternate;
-      }
-    }
-  }
-  */
 }
 
 /*--------Keyframes------------*/

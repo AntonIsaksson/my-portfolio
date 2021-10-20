@@ -44,7 +44,7 @@ const Resume = () => {
               <div className="timeline-step">
                 <div className="timeline-content">
                   <div className="inner-circle"></div>
-                  <p className="h6 mt-3 mb-1 year">{d.year} - {d.happening}</p>
+                  <p className="h6 mb-1 year">{d.year} - {d.happening}</p>
                   
                   <p className="mb-0 mb-lg-0 description">{d.desc}</p>
                 </div>

@@ -12,6 +12,12 @@
   .left {
     margin-top: 180px;
 
+    @include mobile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     img {
       max-width: 100%;
       mask-image: linear-gradient(
@@ -27,6 +33,13 @@
       filter: opacity(0.7) grayscale(0.4) brightness(0.9) hue-rotate(280deg)
         drop-shadow(29px 36px 23px #26364a);
       border-radius: 40%;
+
+      @include mobile {
+        max-width: 80%;
+        position: absolute;
+        top: 420px;
+        
+      }
     }
   }
 
@@ -34,6 +47,14 @@
     .form-container {
       max-width: 700px;
       position: relative;
+      margin: 0;
+
+      @include mobile {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        
+      }
 
       legend {
         justify-content: center;
@@ -42,10 +63,18 @@
         left: 5px;
         top: 70px;
         font-size: 30px;
+
+        @include mobile {
+          font-size: 20px;
+        }
       }
 
       .formGroupsContainer {
         margin-top: 170px;
+
+        @include mobile {
+          margin-top: 130px;
+        }
 
         .form-group {
           padding: 10px;
@@ -53,6 +82,7 @@
           justify-content: center;
           display: flex;
           top: 150px;
+          
 
           ::placeholder {
             color: rgba(173, 240, 255, 0.272);
@@ -74,6 +104,11 @@
             &::-webkit-scrollbar {
               display: none;
             }
+           
+
+            @include mobile {
+              font-size: 12px;
+            }
             .form-control {
               color: rgb(166, 211, 233);
             }
@@ -87,6 +122,10 @@
             transition: 0.4s all ease-in-out;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             font-size: 20px;
+
+            @include mobile {
+              font-size: 15px;
+            }
 
             &:hover {
               font-size: 22px;

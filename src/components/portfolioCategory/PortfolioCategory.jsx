@@ -137,7 +137,7 @@ const PortfolioCard = () => {
           </h1>
           <div className="item row">
             {d.projects.map((project) => (
-              <div className="col-4 first">
+              <div className="col-6 col-md-4 first">
                 <div className="card">
                   <div
                     className="imgContainerCard"

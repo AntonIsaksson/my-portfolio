@@ -1,22 +1,27 @@
-
-
 $mainColor: rgba(165, 123, 68, 0.782);
-$mainColor2:   linear-gradient(
-  319deg,
-  /*#faa499 0%,
-  #f7dd85 37%,
-  #ffc55c 100%*/
-  #005AA7 0%,
-  #FFFDE4 100%
-);
-  
+$mainColor2: linear-gradient(319deg, #005aa7 0%, #fffde4 100%);
+
 /*Main Colors in Project*/
 $background: #8f542121;
 $primary: #0b628b4e;
 $secondary: #8f542124;
 $third: #0b628b50;
 $width: 768px;
+$width2: 400px;
 
+//Mixins
+
+@mixin mobile {
+  @media (max-width: #{$width}) {
+    @content;
+  }
+}
+
+@mixin mobileSmall {
+  @media (max-width: #{$width2}) {
+    @content;
+  }
+}
 
 //HEADERS
 //Header 1
@@ -26,11 +31,16 @@ $width: 768px;
   text-transform: uppercase;
   letter-spacing: 0.5em;
   background-clip: text;
+  text-align: center;
+
+  @include mobileSmall {
+    font-size: 25px;
+    letter-spacing: 0.3rem;
+  }
 
   .subHeaderSpan {
     display: block;
     margin: 0 auto;
-
     background: url(https://cdn.vectorstock.com/i/1000x1000/87/21/stylized-waves-vector-1338721.jpg)
       repeat-y;
     animation: aitf2 20s linear infinite;
@@ -40,7 +50,6 @@ $width: 768px;
     -webkit-animation: aitf2 20s linear infinite;
     -webkit-transform: translate3d(0, 0, 0);
     -webkit-backface-visibility: hidden;
-
     text-shadow: 0 0 5px rgba(88, 172, 255, 0.408),
       0 0 10px rgba(88, 172, 255, 0.408), 0 0 20px rgba(88, 172, 255, 0.408);
     padding: 20px 50px;
@@ -55,6 +64,7 @@ $width: 768px;
   text-transform: uppercase;
   letter-spacing: 0.5em;
   background-clip: text;
+  text-align: center;
 
   .subHeaderSpan2 {
     display: block;
@@ -76,12 +86,6 @@ $width: 768px;
   }
 }
 
-
-@mixin mobile {
-  @media (max-width: #{$width}) {
-    @content;
-  }
-}
 
 
 //KEYFRAMES

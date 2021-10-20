@@ -1,8 +1,15 @@
+@import '../../global.scss';
+
 .pbContainer {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 100px;
+
+    @include mobile {
+      margin-top: 100px;
+      
+    }
 }
 
 
@@ -17,6 +24,12 @@
   width: 600px;
   margin: 20px;
   box-shadow: 0 0 10px #5f85ab82;
+  @include mobile {
+    margin: 10px;
+    padding: 15px 20px;
+    height: 20px;
+    
+  }
 
   .icon {
     margin: 5px;
@@ -30,6 +43,9 @@
     text-shadow: #000000 2px 10px 1px;
     transition: 0.3s all ease-in-out;
     
+    @include mobile {
+      margin: 2px;
+    }
     &:hover {
       font-size: 25px;
       color: #fafafa;
@@ -54,6 +70,11 @@
   background-position: 100% 300%;
   overflow: hidden;
   padding: 0 5px;
+
+  @include mobile {
+    height: 20px;
+    padding: 0;
+  }
   
   
 
@@ -73,6 +94,10 @@
     background-clip: text;
     color: transparent;
     text-shadow: #1a3151 0px 3px 3px;
+
+    @include mobile {
+      font-size: 11px;
+    }
    
   }
  

@@ -1,3 +1,5 @@
+@import '../../global.scss';
+
 .portfolio {
   background: linear-gradient(
     #2c3e509a 1%,
@@ -16,13 +18,39 @@
     position: absolute;
     cursor: pointer;
 
+    @include mobile {
+      height: 30px;
+    }
+
+    @include mobileSmall {
+      height: 25px;
+    }
+
     &.left {
       left: 100px;
       transform: rotateY(180deg);
+
+      @include mobile {
+        left: 20px;
+        bottom: 260px;
+      }
+      @include mobileSmall {
+        left: 1px;
+        bottom: 255px;
+      }
     }
 
     &.right {
       right: 100px;
+
+      @include mobile {
+        right: 20px;
+        bottom: 260px;
+      }
+      @include mobileSmall {
+        right: 1px;
+        bottom: 255px;
+      }
     }
   }
 
@@ -33,5 +61,12 @@
     position: absolute;
     transition: all 1s ease-in-out;
     left: 0;
+
+    @include mobile {
+      top: 120px;
+    }
+    @include mobileSmall {
+      top: 120px;
+    }
   }
 }
