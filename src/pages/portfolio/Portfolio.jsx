@@ -4,6 +4,7 @@ import PortfolioCategory from "../../components/portfolioCategory/PortfolioCateg
 
 
 
+
 const Portfolio = (data) => {
   const [slide, setSlide] = useState(1);
 
@@ -34,6 +35,8 @@ const Portfolio = (data) => {
         alt=""
         onClick={() => handleClick("")}
       />
+
+      
     </div>
   );
 };

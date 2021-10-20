@@ -1,8 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./app.scss";
 
-
-
 import NavbarMenu from "./components/navbar/NavbarMenu";
 import LandingPage from "./pages/landingpage/LandingPage";
 import Portfolio from "./pages/portfolio/Portfolio";

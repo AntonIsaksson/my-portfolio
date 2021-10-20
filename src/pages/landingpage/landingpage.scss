@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 .landingPage {
   --background: #8f542121;
   --primary: #0b628b4e;
@@ -39,7 +41,7 @@
     position: absolute;
     top: 26%;
     left: 150px;
-    color: #f1f1f15a;
+    color: #f1f1f191;
     ///*ORANGE*/text-shadow: 2px 2px 2px rgba(28, 255, 92, 0.619);
     ///*ORANGE*/text-shadow: 2px 2px 2px rgba(255, 130, 28, 0.619);
     /*PINK*/
@@ -53,8 +55,6 @@
         justify-content: space-around;
         padding: 20px;
         transition: 0.4s all ease-in-out;
-        
-        
 
         &:hover {
           color: #f1f1f1f6;
@@ -64,6 +64,7 @@
             color: #3d62ab2b;
           }
         }
+
         .mni {
           transition: 0.4s all ease-in-out;
           font-size: 20px;
@@ -74,7 +75,7 @@
         }
 
         .l1 {
-          font-size: 50px;
+          font-size: 55px;
           transition: 0.4s all ease-in-out;
           cursor: pointer;
           font-weight: 700;
@@ -89,18 +90,23 @@
       }
     }
   }
+
   .header2 {
     z-index: 5;
     position: absolute;
-    top: 60%;
-    right: 50px;
+    
+    right: 150px;
     animation: mover 3s infinite alternate;
+    top: 150px;
+    padding: 100px;
+    font-size: 36px;
+    text-align: center;
 
-    h1 {
-      padding: 100px;
-      font-size: 30px;
+    &::after {
+      
+      content: "Front End Developer";
       text-align: center;
-      animation: glow 3.5s ease-in-out infinite alternate;
+      animation: glow 5.5s ease-in-out infinite alternate;
     }
   }
   //Bubbles-----------------------------//
@@ -155,7 +161,7 @@
     }
   }
   //Bubble Image END-----------------------------//
-
+  /*
   .welcomeBubble {
     justify-content: center;
     position: absolute;
@@ -208,6 +214,7 @@
       }
     }
   }
+  */
 }
 
 /*--------Keyframes------------*/
@@ -221,6 +228,7 @@
       var(--secondary) 100%
     );
     filter: drop-shadow(16px 16px 20px rgb(6, 41, 68));
+    
   }
 
   50% {
@@ -250,15 +258,22 @@
 }
 
 @keyframes glow {
-  from {
+  0% {
+    content: "Full Stack Developer";
     color: rgb(12, 29, 39);
     text-shadow: 0 0 10px #f09dff16, 0 0 20px #9dd6ff5f, 0 0 30px #f49dff5f,
       0 0 40px #9dc6ff5f, 0 0 50px #ed9dff5f, 0 0 60px #9dc6ff5f,
       0 0 70px #e59dff5f, 0 0 90px #788ec15f;
   }
-
-  to {
+  50% {
     color: rgba(0, 0, 0, 0);
+    text-shadow: 0 0 10px #f09dff00, 0 0 20px #9dd6ff00, 0 0 30px #f49dff00,
+      0 0 40px #9dc6ff00, 0 0 50px #ed9dff00, 0 0 60px #9dc6ff00,
+      0 0 70px #e59dff00, 0 0 90px #788ec100;
+  }
+  100% {
+    content: "Web Designer";
+    color: rgb(12, 29, 39);
     text-shadow: 0 0 20px #364f585f, 0 0 30px #3d58625f, 0 0 40px #6692a25f,
       0 0 50px #7bb3c75f, 0 0 60px #9de5ff5f, 0 0 70px #9de5ff5f,
       0 0 80px #9de5ff5f, 0 0 90px #9de5ff5f;
