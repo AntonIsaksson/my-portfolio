@@ -1,5 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./resume.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const Resume = () => {
   const data = [
@@ -60,6 +62,9 @@ const Resume = () => {
           </div>
         </div>
       </div>
+      <a href='#skills' className="arrowLink">
+            <FontAwesomeIcon className="arrowIcon" icon={faChevronDown} />
+      </a>
     </div>
   );
 };

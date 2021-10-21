@@ -1,7 +1,7 @@
 import "./skills.scss";
 import ProgressBar from "../../components/progressbar/ProgressBar";
-
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const Skills = () => {
   return (
@@ -11,6 +11,10 @@ const Skills = () => {
       
 
       <ProgressBar />
+
+      <a href='#contact' className="arrowLink">
+            <FontAwesomeIcon className="arrowIcon" icon={faChevronDown} />
+      </a>
     </div>
   );
 };

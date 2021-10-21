@@ -1,8 +1,10 @@
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./contact.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import emailjs from "emailjs-com";
-import{ init } from 'emailjs-com';
+import { init } from "emailjs-com";
 init("user_YnkXPlVwLYoYY1aere2EN");
 
 const Contact = () => {
@@ -12,7 +14,12 @@ const Contact = () => {
     e.preventDefault();
     setMessage(true);
     emailjs
-      .sendForm("outlook", "template_3z24149", e.target, "user_YnkXPlVwLYoYY1aere2EN")
+      .sendForm(
+        "outlook",
+        "template_3z24149",
+        e.target,
+        "user_YnkXPlVwLYoYY1aere2EN"
+      )
       .then(
         (result) => {
           console.log(result.text);
@@ -21,11 +28,15 @@ const Contact = () => {
           console.log(error.text);
         }
       );
-      e.target.reset();
+    e.target.reset();
   };
 
   return (
     <div className="contact container-fluid" id="contact">
+      <a href="#landingPage" className="arrowLinkUp">
+        <FontAwesomeIcon className="arrowIcon" icon={faChevronUp} />
+        
+      </a>
       <div className="row justify-content-evenly align-items-center">
         <div className="col-md-6 col-12 left">
           <img src="assets/img/handshake.png" alt="" />
@@ -86,8 +97,9 @@ const Contact = () => {
                             >
                               Send!
                             </button>
-                            <div className='col-12 messageContainer'>{message && <span>Thanks, I'll reply ASAP!</span>}</div>
-                            
+                            <div className="col-12 messageContainer">
+                              {message && <span>Thanks, I'll reply ASAP!</span>}
+                            </div>
                           </div>
                         </div>
                       </div>

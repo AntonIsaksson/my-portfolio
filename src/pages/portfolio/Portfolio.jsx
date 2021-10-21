@@ -1,7 +1,8 @@
 import "./portfolio.scss";
 import { useState } from "react";
 import PortfolioCategory from "../../components/portfolioCategory/PortfolioCategory";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -35,9 +36,11 @@ const Portfolio = (data) => {
         alt=""
         onClick={() => handleClick("")}
       />
-
-      
+      <a href='#resume' className="arrowLink">
+            <FontAwesomeIcon className="arrowIcon" icon={faChevronDown} />
+      </a>
     </div>
+    
   );
 };
 

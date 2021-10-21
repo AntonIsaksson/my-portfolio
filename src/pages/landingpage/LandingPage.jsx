@@ -1,5 +1,7 @@
 import "./landingpage.scss";
-import ArrowDown from "../../components/arrowDown/ArrowDown";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+
 const LandingPage = () => {
   return (
     <div className="landingPage" id="landingPage">
@@ -42,7 +44,9 @@ const LandingPage = () => {
       </div>*/}
       {/* ------Welcome Bubble----- */}
       
-      <ArrowDown />
+      <a href='#portfolio' className="arrowLink">
+            <FontAwesomeIcon className="arrowIcon" icon={faChevronDown} />
+      </a>
     </div>
   );
 };

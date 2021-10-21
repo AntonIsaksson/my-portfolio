@@ -1,6 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./app.scss";
-
 import NavbarMenu from "./components/navbar/NavbarMenu";
 import LandingPage from "./pages/landingpage/LandingPage";
 import Portfolio from "./pages/portfolio/Portfolio";
@@ -8,12 +7,6 @@ import Resume from "./pages/resume/Resume";
 import Skills from "./pages/skills/Skills";
 import Contact from "./pages/contact/Contact";
 import { useState } from "react";
-
-import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-
-// ..
-AOS.init();
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
