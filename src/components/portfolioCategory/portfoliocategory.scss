@@ -29,7 +29,7 @@
     align-items: center;
     margin-top: 50px;
 
-    @include mobileSmall {
+    @include mobile {
       max-height: 500px;
       padding: 10px; 
       margin-top: 0;
@@ -60,7 +60,7 @@
         display: flex;
         
 
-        @include mobileSmall {
+        @include mobile {
           max-height: 5rem;
           height: 5rem; 
           margin: 10px 0;
@@ -117,9 +117,11 @@
               color: #fafafa00;
             }
 
-            a {
-              color: bisque;
-            }
+            
+          }
+          a {
+            color: bisque;
+            text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
           }
         }
 
@@ -136,14 +138,14 @@
           }
           .iconContainer {
             
-            @include mobileSmall {
+            @include mobile {
               position: absolute;
               padding: 0;
              }
 
             .icon2 {
               transition: all 1s ease-in-out;
-              font-size: 40px;
+              font-size: 300%;
               filter: opacity(1);
               color: rgba(255, 169, 98, 0.646);
               border-radius: 25%;
@@ -153,7 +155,7 @@
               display: flex;
               margin: 0;
 
-              @include mobileSmall {
+              @include mobile {
                font-size: 10px;
                padding: 0;
                
@@ -162,7 +164,7 @@
           }
           
           h5 {
-            @include mobileSmall {
+            @include mobile {
               font-size: 90%;
               
             }
@@ -171,27 +173,28 @@
             color: #7cb2d6;
             text-align: center;
 
-            @include mobileSmall {
+            @include mobile {
               display: none;
             }
           }
 
           
-          a {
-            color: rgba(255, 228, 196, 0);
-            text-align: center;
-            transition: 0.3s all ease-in-out;
-            display: flex;
-            justify-content: center;
-            font-size: 15px;
-            text-decoration: underline ;
-            margin-top: 40px;
-            text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
-            
-            &:hover {
-              color: rgb(46, 142, 226);
-              cursor: pointer;
-            }
+          
+        }
+        a {
+          color: rgba(255, 228, 196, 0);
+          text-align: center;
+          transition: 0.3s all ease-in-out;
+          display: flex;
+          justify-content: center;
+          font-size: 15px;
+          text-decoration: underline ;
+          position: absolute;
+          text-shadow: 0px 2px 2px rgba(0, 0, 0, 0);
+          bottom: 0;
+          &:hover {
+            color: rgb(46, 142, 226);
+            cursor: pointer;
           }
         }
       }

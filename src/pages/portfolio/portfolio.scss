@@ -27,7 +27,7 @@
     }
 
     &.left {
-      left: 100px;
+      left: 2%;
       transform: rotateY(180deg);
 
       @include mobile {
@@ -41,7 +41,7 @@
     }
 
     &.right {
-      right: 100px;
+      right: 2%;
 
       @include mobile {
         right: 20px;

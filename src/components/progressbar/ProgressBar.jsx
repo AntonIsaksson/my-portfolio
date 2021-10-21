@@ -1,6 +1,7 @@
 import "./progressbar.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 import {
   faCss3Alt,
   faHtml5,
@@ -17,25 +18,25 @@ const ProgressBar = () => {
     {
       id: 1,
       title: "HTML",
-      percentage: "50%",
+      percentage: "80%",
       icon: <FontAwesomeIcon icon={faHtml5} />,
     },
     {
       id: 2,
-      title: "Css/Sass",
-      percentage: "65%",
+      title: "Css/SCss",
+      percentage: "70%",
       icon: <FontAwesomeIcon icon={faCss3Alt} />,
     },
     {
       id: 3,
       title: "JS",
-      percentage: "40%",
+      percentage: "50%",
       icon: <FontAwesomeIcon icon={faJsSquare} />,
     },
     {
       id: 4,
       title: "React",
-      percentage: "60%",
+      percentage: "65%",
       icon: <FontAwesomeIcon icon={faReact} />,
     },
     {
@@ -47,13 +48,13 @@ const ProgressBar = () => {
     {
       id: 6,
       title: "Django",
-      percentage: "65%",
+      percentage: "70%",
       icon: <FontAwesomeIcon icon={faPython} />,
     },
     {
       id: 7,
       title: "Wix",
-      percentage: "80%",
+      percentage: "85%",
       icon: <FontAwesomeIcon icon={faWix} />,
     },
     {
@@ -61,6 +62,12 @@ const ProgressBar = () => {
       title: "Wordpress",
       percentage: "35%",
       icon: <FontAwesomeIcon icon={faWordpress} />
+    },
+    {
+      id: 9,
+      title: "MongoDB",
+      percentage: "50%",
+      icon: <FontAwesomeIcon icon={faDatabase} />
     },
   ];
 

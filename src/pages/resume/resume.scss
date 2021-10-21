@@ -7,8 +7,7 @@
     #517293d0 10%
   );
   color: #ecf0f1;
-  position: relative;
-  
+  position: relative; 
   justify-content: center;
   align-items: center;
   display: flex;
@@ -19,6 +18,13 @@
     display: flex;
     padding-top: 95px;
   }
+
+  @include mobile {
+    scrollbar-width: none; //for firefox
+        &::-webkit-scrollbar{
+            display: none;
+        }
+  }
 }
 
 .timelineContainer {
@@ -28,6 +34,7 @@
 
   @include mobile {
     top: 120px;
+    scrollbar-width: none;
   }
 
   .timeline-steps {
@@ -62,6 +69,7 @@
           padding-top: 0;
           display: flex;
           flex-direction: row;
+          display: none;
         }
       }
   
@@ -78,6 +86,7 @@
         @include mobile {
           width: 6rem;
           right: 3rem;
+          display: none;
         }
       }
     }
@@ -89,6 +98,7 @@
 
       @include mobile {
         width: 100%;
+        
         
       }
   
@@ -106,6 +116,7 @@
         @include mobile {
           width: 0.4rem;
           height: 0.4rem;
+          display: none;
         }
         
         &:before {
@@ -123,6 +134,7 @@
             width: 2rem;
             height: 2rem;
             min-width: 2rem;
+            display: none;
           }
         }
       }
@@ -134,8 +146,15 @@
         text-shadow: 2px 0px 6px rgba(18, 38, 50, 0.66);
         padding: 10px;
 
+        hr {
+          display: none;
+        }
         @include mobile {
           font-size: 15px;
+
+          hr {
+            display: flex;
+          }
         }
       }
 
@@ -147,11 +166,6 @@
       }
     }
   }
-  
-  
-   
-  
-
 }
 
 

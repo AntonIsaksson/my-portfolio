@@ -64,7 +64,7 @@ const PortfolioCard = () => {
           projectName: "Halloween Memory",
           img: "assets/img/halloweenMemory.gif",
           description:
-            "Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.",
+            "My first ever Javascript project! In 2019, about 3 months in to Code Academys Full Stack Program, the mission was to make an application using only HTML, CSS and JS(jQuery). This is the result!",
           icons: [
             {
               icon: <FontAwesomeIcon className="m-2" icon={faCss3Alt} />,
@@ -76,6 +76,8 @@ const PortfolioCard = () => {
               icon: <FontAwesomeIcon className="m-2" icon={faJsSquare} />,
             },
           ],
+          websiteName: "GithubPages/mystery-memory",
+          url: "https://antonisaksson.github.io/mystery-memory/",
         },
         {
           projectName: "React Project 2",
@@ -154,17 +156,18 @@ const PortfolioCard = () => {
 
                     <div className="row align-items-center">
                       {project.icons.map((i) => (
-                        <div className="col-4 align-items-center iconContainer mt-5">
+                        <div className="col-4 align-items-center iconContainer">
                           <div className="card-img-bottom icon2 text-center">
                             {i.icon}
                           </div>
                         </div>
                       ))}
                     </div>
-                    <a href={project.url} target="_blank" rel='noreferrer'>
+                    
+                  </div>
+                  <a href={project.url} target="_blank" rel='noreferrer'>
                       {project.websiteName}
                     </a>
-                  </div>
                 </div>
               </div>
             ))}
