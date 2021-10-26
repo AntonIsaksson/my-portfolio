@@ -64,18 +64,18 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-image: url(./assets/oceanBG.jpg); /*Photo by <a href="https://unsplash.com/@christoffere?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Christoffer Engström</a> on <a href="https://unsplash.com/s/photos/ocean?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
-      background-size: 100%;
+      background-size: auto;
       background-attachment: unset;
       background-position: 0%;
       text-shadow: 3px 0px 7px rgba(21, 63, 81, 0.367),
         -3px 0px 7px rgba(21, 56, 81, 0.401), 0px 4px 7px rgba(8, 22, 35, 0.415);
       text-shadow: 3px 3px 6px #ffffff26, -2px 1px 7px #ffffff34;
       background-color: #fff;
-      animation: clouds-moving infinite 220s;
+      animation: clouds-moving infinite 600s;
       animation-fill-mode: forwards;
       animation-play-state: running;
       animation-timing-function: linear;
-      transition: all 1s ease-in-out;
+      transition: all 0.5s ease-in-out;
 
       @include mobileSmall {
         font-size: 25px;
@@ -88,7 +88,6 @@
       }
 
       &:hover {
-        background-size: 150%;
         text-shadow: 3px 3px 6px #2c2c2ca5, -2px 1px 7px #3d3d3d34;
       }
     }

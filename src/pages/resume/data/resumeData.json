@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "year": "2016 - (Now)",
+    "happening": "Slow Down Resort - Web Designer",
+    "desc": "Where it all started. I had been working full-/part time att Slow Down since I graduated High School in 2013, but in 2017 I got the offer to create a new website for the resort. With no experience of programming or web development, I used wix.com to create the site:",
+    "link": "https://www.slowdownlanta.se/"
+  },
+  {
+    "id": 2,
+    "year": "2019-2020",
+    "happening": "Code Institute - Full Stack Developer",
+    "desc": "First introduction to coding (for real). This 6 Months program is designed to get you from zero to hero in Full Stack Development (or at least lead to your first job in the business). Starting out with the basics of HTML I ended up creating a full page website using Python's Django, containing User interaction with Sign Up and subscribe functions, etc. Very happy with this school and the program!",
+    "link": ""
+  },
+  {
+    "id": 3,
+    "year": "2020 (Sep-Dec)",
+    "happening": "Future Games - Game Engines",
+    "desc": "I stumbled upon this school and course by chance and thought that game developing would be a very fun skill to add to my skillset. The whole course was based on the game engine Unreal Engine. Here I learned about Blue-printing (a visual programming language), and tons of other stuff about game development. I got to create games in groups with people online, with the help of mainly Discord and various version control systems, which was a great experience!",
+    "link": ""
+  },
+  {
+    "id": 4,
+    "year": "2021 (Feb-July)",
+    "happening": "Slow Down Beachvolley - Event Manager & Web Designer",
+    "desc": "An opportunity that was to good to say no to. Starting planning this Beachvolleyball event on the other side of the country, with the on-going pandemic, a poor budget and with short notice, turned out to be a ",
+    "link": ""
+  },
+  {
+    "id": 5,
+    "year": "2021 (Now) ",
+    "happening": "Newton - Construction Engineer (+Learning ReactJs)",
+    "desc": "",
+    "link": ""
+  }
+]

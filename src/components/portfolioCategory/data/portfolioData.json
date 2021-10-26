@@ -1,0 +1,131 @@
+[
+  {
+    "id": 1,
+    "category": "CMS Websites",
+    "projects": [
+      {
+        "id": 1,
+        "projectName": "Slow Down Resort",
+        "img": "assets/img/slowDown.gif",
+        "description": "Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.",
+        "icons": [
+          {
+            "id": 1,
+            "icon": "fa-brands fa-wix"
+          }
+        ],
+        "websiteName": "www.slowdownlanta.se",
+        "url": "https://www.slowdownlanta.se/"
+      },
+      {
+        "id": 2,
+        "projectName": "Lilla Svenska Skolan",
+        "img": "assets/img/svenskaSkolan.png",
+        "description": "Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.",
+        "icons": [
+          {
+            "id": 1,
+            "icon": "{faWix}"
+          }
+        ],
+        "websiteName": "www.svenskaskolanlanta.se",
+        "url": "http://www.svenskaskolanlanta.se/"
+      },
+      {
+        "id": 3,
+        "projectName": "Slow Down Beach",
+        "img": "assets/img/slowDownBeachvolley.gif",
+        " description": "Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.",
+        "icons": [
+          {
+            "id": 1,
+            "icon": "<FontAwesomeIcon icon={faWix} />"
+          }
+        ],
+        "websiteName": "www.slowdownbeachvolley.se",
+        "url": "https://www.slowdownbeachvolley.se/"
+      }
+    ]
+  },
+
+  {
+    "id": 2,
+    "category": "Front End",
+    "projects": [
+      {
+        "id": 1,
+        "projectName": "Halloween Memory",
+        "img": "assets/img/halloweenMemory.gif",
+        "description": "My first ever Javascript project! In 2019, about 3 months in to Code Academys Full Stack Program, the mission was to make an application using only HTML, CSS and JS(jQuery). This is the result!",
+        "icons": [
+          {
+            "id": 1,
+            "icon": "{faCss3Alt}"
+          },
+          {
+            "id": 2,
+            "icon": "{faHtml5}"
+          },
+          {
+            "id": 3,
+            "icon": "{faJsSquare}"
+          }
+        ],
+        " websiteName": "GithubPages/mystery-memory",
+        "url": "https://antonisaksson.github.io/mystery-memory/"
+      },
+      {
+        "id": 2,
+        "projectName": "React Project 2",
+        "img": "",
+        "description": "Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.",
+        "icons": [
+          {
+            "id": 1,
+            "icon": "{faWix}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "category": "Full Stack",
+    "projects": [
+      {
+        "id": 1,
+        "projectName": "Game Design 2d",
+        "img": "assets/img/gameDesign.gif",
+        "description": "Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.",
+        "websiteName": "www.gamedesign-2d.com",
+        "url": "https://gamedesign-2d.herokuapp.com/",
+        "icons": [
+          {
+            "id": 1,
+            "icon": "{faCss3Alt}"
+          },
+          {
+            "id": 2,
+            "icon": "{faHtml5}"
+          },
+          {
+            "id": 3,
+            "icon": "{faJsSquare}"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "projectName": "Python Project 2",
+        "img": "",
+        "description": "Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.",
+        "icons": [
+          {
+            "id": 1,
+            "icon": "{faWix}"
+          }
+        ]
+      }
+    ]
+  }
+]
