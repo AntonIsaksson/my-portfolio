@@ -3,30 +3,27 @@
 //Topbar
 .topbar {
   width: 100%;
-
-  background-color: #0f3f5765;
-  box-shadow: 0 20px 20px -1px rgba(9, 31, 49, 0.62);
-  font-family: "Roboto Slab", serif;
-  color: #fafafa;
   position: fixed;
   top: 0;
   z-index: 10;
   max-height: 70px;
+  background-color: #0f3f5765;
+  box-shadow: 0 20px 20px -1px rgba(9, 31, 49, 0.62);
+  font-family: "Roboto Slab", serif;
+  color: #fafafa;
   transition: all 0.7s ease;
-  scrollbar-width: none; //For Firefox
+  scrollbar-width: none;
   &::-webkit-scrollbar {
     display: none;
   }
 
-  //active topbar
   &.active {
     color: #fcfcfc;
     background-color: #0f3f5700;
     box-shadow: 0 20px 20px -1px rgba(9, 31, 49, 0);
 
-    //Hamburger
+    
     .hamburger {
-      //Hamburger span
       span {
         &:first-child {
           background-color: #ffffff;
@@ -42,22 +39,16 @@
           transform: rotate(-405deg);
         }
       }
-      //end Hamburger span
     }
-    //end Hamburger
   }
-  //end active topbar
 }
-//end Topbar
 
-//Wrapper
 .wrapper {
   padding: 10px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  //Left side wrapper
   .left {
     display: flex;
     align-items: center;
@@ -106,7 +97,6 @@
       display: flex;
       align-items: center;
       margin-left: 30px;
-
       font-weight: 400;
 
       @include mobile {
@@ -125,11 +115,8 @@
       text-shadow: 0px 2px 3px rgba(23, 42, 69, 0.5);
     }
   }
-  //end Left side wrapper
 
-  //Right side wrapper
   .right {
-    //Right Hamburger
     .hamburger {
       width: 32px;
       height: 25px;
@@ -138,7 +125,7 @@
       justify-content: space-between;
       cursor: pointer;
 
-      scrollbar-width: none; //For Firefox
+      scrollbar-width: none;
       &::-webkit-scrollbar {
         display: none;
       }
@@ -163,11 +150,8 @@
         }
       }
     }
-    //end Right Hamburger
   }
-  //end Right side wrapper
 }
-//end Wrapper
 
 @keyframes clouds-moving {
   0% {
