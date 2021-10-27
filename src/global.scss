@@ -1,8 +1,14 @@
 //Width:s
 $width: 768px;
 $width2: 400px;
+$width3: 1000px;
 
 //Mixins
+@mixin medium {
+  @media (max-width: #{$width3}) {
+    @content;
+  }
+}
 
 @mixin mobile {
   @media (max-width: #{$width}) {

@@ -8,6 +8,7 @@
         width: 100%;
         height: 100vh;
         position: relative;
+        
         scroll-behavior: smooth;
         scroll-snap-type: y mandatory;
         scrollbar-width: none; //for firefox
@@ -19,6 +20,7 @@
             width: 100vw;
             height: 100vh;
             scroll-snap-align: start;
+            
         }
     }
 }

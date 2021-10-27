@@ -98,9 +98,10 @@
       margin-left: 30px;
       font-weight: 400;
 
-      @include mobile {
+      @include medium {
         display: none;
       }
+      
     }
 
     .icon {
@@ -112,6 +113,8 @@
       font-size: 15px;
       color: #b7dcee;
       text-shadow: 0px 2px 3px rgba(23, 42, 69, 0.5);
+
+      
     }
   }
 
