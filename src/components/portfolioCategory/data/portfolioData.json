@@ -73,18 +73,6 @@
         ],
         " websiteName": "GithubPages/mystery-memory",
         "url": "https://antonisaksson.github.io/mystery-memory/"
-      },
-      {
-        "id": 2,
-        "projectName": "React Project 2",
-        "img": "",
-        "description": "Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.",
-        "icons": [
-          {
-            "id": 1,
-            "icon": "{faWix}"
-          }
-        ]
       }
     ]
   },
@@ -111,18 +99,6 @@
           {
             "id": 3,
             "icon": "{faJsSquare}"
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "projectName": "Python Project 2",
-        "img": "",
-        "description": "Lorem haspd awnfa asass asdsdasdasd as asf asassd asdasd.",
-        "icons": [
-          {
-            "id": 1,
-            "icon": "{faWix}"
           }
         ]
       }

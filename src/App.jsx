@@ -15,6 +15,9 @@ function App() {
     <div className="app">
       <NavbarMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <div className="sections"  >
+        
+        
+        
         <LandingPage />
         <Portfolio />
         <Resume />

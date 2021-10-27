@@ -6,7 +6,13 @@ const LandingPage = () => {
   return (
     <div className="landingPage" id="landingPage">
       <div className="imageWrap">
-        <div className="bgimage-home"></div>
+        <div className="bgimage-home">
+          {/* <div className='underDev'>
+            <img src="assets/img/under_construction.jpg" alt="" />
+            <h1>Site Under Construction</h1>
+          </div> */}
+        
+        </div>
       </div>
 
       <div className="header">
